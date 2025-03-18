@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@media (max-width: 1400px) {
+  .modalWrapper {
+    max-width: 30vw !important;
+    margin-bottom: 4vw !important;
+  }
+}
+:root {
+  background-image: url("./assets/landingBackground.png"); /* Replace with your image */
+  background-size: cover; /* Covers the entire screen without stretching */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: url(../public/assets/download.png) 14 0, pointer !important;
+  user-select: none;
+  overflow-x: hidden;
+  background-image: url("your-image.jpg"); /* Replace with your image */
+  background-size: cover; /* Covers the entire screen without stretching */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+.modalWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vw;
+  padding: 2vw;
+  border-radius: 10px;
+  cursor: url(../public/assets/download.png) 14 0, pointer;
+  background: url(../public/assets/modalBackground.png);
+  background-size: contain;
+}
+.startGameModal {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  text-overflow: wrap;
+  background-color: rgb(250, 247, 247);
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  gap: 2vw;
+  color: black;
+  margin: 4vw 1vw 1vw 1vw;
+  border-radius: 5px;
+  line-height: 2em;
+  outline: black solid 2px;
+}
+.startGameModal > div > h1 {
+  font-size: 2rem;
+  transform-origin: left;
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden;
+  width: 0; /* Start with width 0 */
+  animation: typing 0.5s steps(30) 0.7s forwards, blink 0.5s infinite;
+}
+.startGameModal > div > p {
+  font-size: 1rem;
+}
+button {
+  padding: 1vw;
+  width: 8rem;
+  text-align: center;
+  font-size: clamp(0rem, 1rem, 1.5rem);
+  font-weight: 600;
+  font-family: "Press Start 2P", cursive;
+  cursor: url(../public/assets/clicker.png) 14 0, pointer !important;
+}
+
+.diffWrapper {
+  background-color: white;
+  border: solid 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  cursor: url(../public/assets/download.png) 14 0, pointer;
+  padding: 2vw;
+  margin-top: 2vw;
+  width: clamp(2rem, 47rem, 48rem);
+}
+.diffModal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-left: 2vw;
+  padding: 1vw;
+}
+.diffModalTitle {
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden;
+  transform-origin: left;
+  width: 0; /* Start with width 0 */
+  animation: typing 1s steps(30) 1s forwards, blink 0.75s infinite;
+}
+
+.diffOption {
+  position: relative;
+  cursor: url(../public/assets/clicker.png) 14 0, pointer;
+}
+.activeOption::before {
+  content: "►"; /* Unicode for a right-facing arrow */
+  position: absolute;
+  left: -3rem; /* Position it to the left */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: black;
+  animation: flashArrow 1s infinite steps(30, end);
+  animation-timing-function: steps(1, start);
+}
+.activeOption {
+  text-decoration: underline;
+}
+.githubRepo {
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+  text-align: center;
+  margin-left: 0.5vw;
+  gap: 1vw;
+  cursor: url(../public/assets/clicker.png) 14 0, pointer;
+}
+.githubTitle {
+  display: flex;
+  align-items: center;
+}
+.svgIcon {
+  height: clamp(2vw, 2.5vw, 5vw);
+  width: clamp(1vw, 2vw, 6vw);
+}
+.gameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.titleBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2vw;
+  gap: 1vw;
+  justify-content: center;
+}
+.gameTitle {
+  font-size: 2rem;
+  width: 0;
+  overflow: hidden;
+  animation: typing 1s steps(30) 1s forwards, blink 0.75s infinite;
+  text-align: center;
+  margin-top: 0.2rem;
+}
+.pokeballLogo {
+  min-width: 3vw;
+}
+.pokemonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  flex-wrap: wrap;
+  min-width: 28vw;
+  margin-top: 2vw;
+  justify-content: center;
+}
+.scoreBox {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+.trophyIcon {
+  width: clamp(1rem, 1.8rem, 2rem);
+}
+.pokemonCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(33, 37, 41, 0.3);
+  text-align: center;
+  border-radius: 10px;
+  text-justify: auto;
+  width: 10vw;
+  min-height: 15vw;
+  justify-content: space-around;
+  padding: 2vw 6vw 2vw 6vw;
+  color: white;
+  text-overflow: hidden;
+  overflow: hidden;
+  perspective: 1000px; /* Creates the 3D effect */
+  transition: transform 0.3s ease-in;
+}
+.pokemonCard:hover {
+  transform: scale(1.1);
+}
+.pokePhoto {
+  width: clamp(7vw, 8vw, 10vw);
+}
+.pokemonTitle {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding: 1vw;
+  text-overflow: hidden;
+  box-sizing: border-box;
+}
+.highScore {
+  display: flex;
+  align-items: center;
+  gap: 0.1vw;
+}
+.pokemonCard:hover {
+  background-color: rgba(33, 37, 41, 0.5);
+}
+@keyframes flashArrow {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  0% {
+    white-space: nowrap;
+    width: 0;
+  }
+  100% {
+    white-space: nowrap;
+    width: 100%;
+  }
+}
