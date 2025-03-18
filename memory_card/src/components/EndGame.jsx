@@ -26,9 +26,7 @@ export function EndGame({
       }`}</div>
       <img
         src={`${
-          winStatus
-            ? "/public/assets/happyPika.gif"
-            : "/public/assets/cryingPika.gif"
+          winStatus ? "/assets/happyPika.gif" : "/assets/cryingPika.gif"
         }`}
         alt=""
       />

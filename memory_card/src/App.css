@@ -4,6 +4,10 @@
     max-width: 30vw !important;
     margin-bottom: 4vw !important;
   }
+  .diffWrapper {
+    display: flex;
+    max-width: 60vw !important;
+  }
 }
 :root {
   background-image: url("../public/assets/landingBackground.png"); /* Replace with your image */
