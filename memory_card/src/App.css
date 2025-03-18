@@ -26,17 +26,25 @@
   .pokemonContainer {
     display: flex !important;
     flex-direction: column !important;
+    flex-wrap: nowrap !important;
     align-items: center !important;
-    width: 20vw !important;
   }
   .pokemonCard {
-    min-width: 10vw !important;
-    min-height: 10vw !important;
+    min-width: 30vw !important;
+    min-height: 30vw !important;
+    font-size: 4rem !important;
+  }
+  .pokePhoto {
+    width: 20vw !important;
   }
   .pokemonTitle {
-    font-size: 0.4rem !important;
+    font-size: 2vw !important;
+  }
+  .gameWrapper {
+    min-height: 80vh !important;
   }
 }
+
 @media (max-width: 600px) {
   .pokemonTitle {
     font-size: 0.4rem !important;
@@ -45,6 +53,26 @@
     display: flex;
     max-width: 60vw !important;
     padding: 10vw !important;
+  }
+  .pokemonContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+  .pokemonCard {
+    min-width: 30vw !important;
+    min-height: 30vw !important;
+    font-size: 4rem !important;
+  }
+  .pokePhoto {
+    width: 30vw !important;
+  }
+  .pokemonTitle {
+    font-size: 2vw !important;
+  }
+  .gameWrapper {
+    min-height: 90vh !important;
   }
 }
 :root {
