@@ -6,7 +6,7 @@
   }
 }
 :root {
-  background-image: url("./assets/landingBackground.png"); /* Replace with your image */
+  background-image: url("../public/assets/landingBackground.png"); /* Replace with your image */
   background-size: cover; /* Covers the entire screen without stretching */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents tiling */
