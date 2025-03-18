@@ -160,6 +160,14 @@ button {
   padding: 2vw;
   gap: 1vw;
   justify-content: center;
+  cursor: url(../public/assets/clicker.png) 14 0, pointer;
+  transition: transform 0.3s;
+}
+.titleBox:active {
+  transform: scale(0.8);
+}
+.titleBox:hover {
+  transform: scale(1.1);
 }
 .gameTitle {
   font-size: 2rem;
@@ -180,6 +188,7 @@ button {
   min-width: 28vw;
   margin-top: 2vw;
   justify-content: center;
+  margin-bottom: 5vw;
 }
 .scoreBox {
   display: flex;
@@ -205,7 +214,11 @@ button {
   text-overflow: hidden;
   overflow: hidden;
   perspective: 1000px; /* Creates the 3D effect */
-  transition: transform 0.3s ease-in;
+  transition: transform 0.5s ease-in;
+}
+.flipped {
+  transform: rotateY(180deg);
+  backface-visibility: none;
 }
 .pokemonCard:hover {
   transform: scale(1.1);
@@ -230,6 +243,38 @@ button {
 }
 .pokemonCard:hover {
   background-color: rgba(33, 37, 41, 0.5);
+}
+.endGameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(33, 37, 41, 0.5);
+  padding: 4vw;
+  gap: 2vw;
+  margin-top: 2vw;
+  border-radius: 10px;
+}
+.buttonBox {
+  display: flex;
+  gap: 1vw;
+}
+.githubButton {
+  display: flex;
+  border-radius: 50px;
+  background-color: red;
+  color: white;
+  align-items: center;
+  padding: 0.5vw;
+  gap: 0.5vw;
+  transition: transform 0.3s ease-in;
+}
+.githubButton:hover {
+  transform: scale(1.1);
+}
+.githubButton:active {
+  transform: scale(0.9);
+  transition: transform 0.1s ease-in;
+  background-color: rgb(255, 92, 83);
 }
 @keyframes flashArrow {
   0% {

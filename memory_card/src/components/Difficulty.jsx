@@ -8,6 +8,10 @@ export function Difficulty({ updateGameStart, updateDiffLevel }) {
       "_blank"
     );
   }
+  function handleClick(level) {
+    updateGameStart(true);
+    updateDiffLevel(level);
+  }
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowDown") {
@@ -33,6 +37,9 @@ export function Difficulty({ updateGameStart, updateDiffLevel }) {
         {levels.map((level, index) => (
           <div
             key={level}
+            onClick={() => {
+              handleClick(level);
+            }}
             className={`diffOption ${
               index === activeOption ? "activeOption" : ""
             }`}
