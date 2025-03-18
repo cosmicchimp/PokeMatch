@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-@media (max-width: 1400px) {
+@media (min-width: 1100px) {
+  .startGameModal {
+    max-width: 40vw !important;
+  }
+}
+@media (max-width: 1100px) {
+  .pokemonTitle {
+    font-size: 0.8rem !important;
+  }
+}
+@media (max-width: 800px) {
   .modalWrapper {
     max-width: 30vw !important;
     margin-bottom: 4vw !important;
@@ -7,6 +17,34 @@
   .diffWrapper {
     display: flex;
     max-width: 60vw !important;
+    padding: 5vw !important;
+  }
+  .diffModalTitle {
+    overflow: visible !important;
+    white-space: wrap !important;
+  }
+  .pokemonContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 20vw !important;
+  }
+  .pokemonCard {
+    min-width: 10vw !important;
+    min-height: 10vw !important;
+  }
+  .pokemonTitle {
+    font-size: 0.4rem !important;
+  }
+}
+@media (max-width: 600px) {
+  .pokemonTitle {
+    font-size: 0.4rem !important;
+  }
+  .diffWrapper {
+    display: flex;
+    max-width: 60vw !important;
+    padding: 10vw !important;
   }
 }
 :root {
@@ -57,7 +95,7 @@ body {
   text-align: center;
   text-overflow: wrap;
   background-color: rgb(250, 247, 247);
-  max-width: 40vw;
+
   display: flex;
   flex-direction: column;
   align-items: center;
