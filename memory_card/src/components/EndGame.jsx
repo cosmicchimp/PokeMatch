@@ -27,8 +27,8 @@ export function EndGame({
       <img
         src={`${
           winStatus
-            ? "../../public/assets/happyPika.gif"
-            : "../../public/assets/cryingPika.gif"
+            ? "/public/assets/happyPika.gif"
+            : "/public/assets/cryingPika.gif"
         }`}
         alt=""
       />
