@@ -66,7 +66,7 @@ export function GamePage({
   async function getPokemon(numOfPokemon) {
     let rawPokeJson = [];
     for (let i = 0; i < numOfPokemon; i++) {
-      let randomNum = Math.floor(Math.random() * 900);
+      let randomNum = Math.floor(Math.random() * 400);
       rawPokeJson.push(
         fetch(`https://pokeapi.co/api/v2/pokemon/${randomNum}`).then((res) =>
           res.json()
