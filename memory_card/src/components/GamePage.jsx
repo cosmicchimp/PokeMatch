@@ -70,7 +70,7 @@ export function GamePage({
       let pokecard = fetch(
         `https://pokeapi.co/api/v2/pokemon/${randomNum}`
       ).then((res) => res.json());
-      if (!rawPokeJson.contains(pokecard)) {
+      if (!rawPokeJson.includes(pokecard)) {
         rawPokeJson.push(pokecard);
       } else {
         let newRandomNum = Math.floor(Math.random() * 200);
