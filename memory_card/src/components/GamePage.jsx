@@ -67,11 +67,22 @@ export function GamePage({
     let rawPokeJson = [];
     for (let i = 0; i < numOfPokemon; i++) {
       let randomNum = Math.floor(Math.random() * 400);
-      rawPokeJson.push(
-        fetch(`https://pokeapi.co/api/v2/pokemon/${randomNum}`).then((res) =>
-          res.json()
-        )
-      );
+      let pokecard = fetch(
+        `https://pokeapi.co/api/v2/pokemon/${randomNum}`
+      ).then((res) => res.json());
+      if (!rawPokeJson.contains(pokecard)) {
+        rawPokeJson.push(pokecard);
+      } else {
+        let newRandomNum = Math.floor(Math.random() * 200);
+        while (newRandomNum == randomNum) {
+          newRandomNum = Math.floor(Math.random() * 300);
+        }
+        pokecard = fetch(
+          `https://pokeapi.co/api/v2/pokemon/${newRandomNum}`
+        ).then((res) => res.json());
+        rawPokeJson.push(pokecard);
+      }
+      rawPokeJson.push();
     }
     const receivedPokeData = await Promise.all(rawPokeJson);
     updateCardData(
